@@ -1,0 +1,15 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongodb": {
+    "host": "ds029454.mongolab.com",
+    "port": 29454,
+    "database": "samidb",
+    "username": "deep01code",
+    "password": "deep01code",
+    "name": "mongodb",
+    "connector": "mongodb"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "fleet",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "fleetName": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "supervisors": {
+      "type": "hasMany",
+      "model": "user",
+      "foreignKey": "fleetId",
+      "through": "supervisors_fleets",
+      "keyThrough": "userId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

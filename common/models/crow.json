@@ -1,0 +1,37 @@
+{
+  "name": "crow",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "crowName": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "users": {
+      "type": "hasMany",
+      "model": "user",
+      "foreignKey": "crowId",
+      "through": "techs_crows",
+      "keyThrough": "userId"
+    },
+    "supervisor": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "userId"
+    },
+    "flights": {
+      "type": "hasMany",
+      "model": "flight",
+      "foreignKey": "crowId",
+      "through": "techs_crows",
+      "keyThrough": "flightId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

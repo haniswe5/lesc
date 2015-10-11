@@ -1,0 +1,31 @@
+{
+  "name": "flights_crows",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "flightId": {
+      "type": "number"
+    },
+    "crowId": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "flight": {
+      "type": "belongsTo",
+      "model": "flight",
+      "foreignKey": "flightId"
+    },
+    "crow": {
+      "type": "belongsTo",
+      "model": "crow",
+      "foreignKey": "crowId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

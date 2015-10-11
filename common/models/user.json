@@ -1,0 +1,46 @@
+{
+  "name": "user",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "fname": {
+      "type": "string"
+    },
+    "lname": {
+      "type": "string"
+    },
+    "empid": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "crows": {
+      "type": "hasMany",
+      "model": "crow",
+      "foreignKey": "userId",
+      "through": "techs_crows",
+      "keyThrough": "crowId"
+    },
+    "supervisors_crows": {
+      "type": "hasMany",
+      "model": "crow",
+      "foreignKey": "userId"
+    },
+    "fleets": {
+      "type": "hasMany",
+      "model": "fleet",
+      "foreignKey": "userId",
+      "through": "supervisors_fleets",
+      "keyThrough": "fleetId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

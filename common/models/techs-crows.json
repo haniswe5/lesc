@@ -1,0 +1,31 @@
+{
+  "name": "techs_crows",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "userId": {
+      "type": "number"
+    },
+    "crowId": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": "userId"
+    },
+    "crow": {
+      "type": "belongsTo",
+      "model": "crow",
+      "foreignKey": "crowId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

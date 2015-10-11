@@ -1,0 +1,110 @@
+{
+  "name": "delay_from",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "down_line_station": {
+      "type": "string"
+    },
+    "flightNumber": {
+      "type": "string"
+    },
+    "oicp_code": {
+      "type": "string"
+    },
+    "acft_reg": {
+      "type": "string"
+    },
+    "corp_code": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "time": {
+      "type": "string"
+    },
+    "shift": {
+      "type": "string"
+    },
+    "supervisor_name": {
+      "type": "string"
+    },
+    "eta": {
+      "type": "string"
+    },
+    "ata": {
+      "type": "string"
+    },
+    "std": {
+      "type": "string"
+    },
+    "atd": {
+      "type": "string"
+    },
+    "eta_1blockIn": {
+      "type": "string"
+    },
+    "ata_blockOut": {
+      "type": "string"
+    },
+    "std_2blockIn": {
+      "type": "string"
+    },
+    "atd_blockOut": {
+      "type": "string"
+    },
+    "discoveredBy": {
+      "type": "string"
+    },
+    "discoveredTime": {
+      "type": "string"
+    },
+    "delayDuring": {
+      "type": "string"
+    },
+    "acftReturnedFrom": {
+      "type": "string"
+    },
+    "logbookSequenceNumber": {
+      "type": "string"
+    },
+    "logDate": {
+      "type": "string"
+    },
+    "problemDescription": {
+      "type": "string"
+    },
+    "correctiveAction": {
+      "type": "string"
+    },
+    "pn": {
+      "type": "string"
+    },
+    "snOn": {
+      "type": "string"
+    },
+    "snOff": {
+      "type": "string"
+    },
+    "passangersStatus": {
+      "type": "string"
+    },
+    "dutyManagerName": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "flight": {
+      "type": "belongsTo",
+      "model": "flight",
+      "foreignKey": "flightId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

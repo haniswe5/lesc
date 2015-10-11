@@ -1,0 +1,81 @@
+{
+  "name": "flight",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "aflight": {
+      "type": "string"
+    },
+    "sta": {
+      "type": "string"
+    },
+    "ntime": {
+      "type": "string"
+    },
+    "ac": {
+      "type": "string"
+    },
+    "apu": {
+      "type": "string"
+    },
+    "std": {
+      "type": "string"
+    },
+    "spot": {
+      "type": "string"
+    },
+    "aremarks": {
+      "type": "string"
+    },
+    "dremarks": {
+      "type": "string"
+    },
+    "fcall": {
+      "type": "string"
+    },
+    "fst": {
+      "type": "string"
+    },
+    "final": {
+      "type": "string"
+    },
+    "time": {
+      "type": "string"
+    },
+    "premarks": {
+      "type": "string"
+    },
+    "arequest": {
+      "type": "string"
+    },
+    "srequest": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "crows": {
+      "type": "hasMany",
+      "model": "crow",
+      "foreignKey": "flightId",
+      "through": "flights_crows",
+      "keyThrough": "crowId"
+    },
+    "delayFroms": {
+      "type": "hasMany",
+      "model": "delay_from",
+      "foreignKey": "flightId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
